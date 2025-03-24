@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latihan Layouting Tabel dan Form</title>
+<style>
+table {
+border: solid 1px black;
+/* Mengartikan bahwasannya border type solid dengan ketebalan
+1px dan color */
+border-collapse: collapse;
+/* Untuk merge border menjadi 1 line */
+}
+td, th {
+width: 100px;
+height: 70px;
+text-align: center;
+vertical-align: middle;
+}
+td {
+font-size: 11px;
+}
+</style>
+<!-- Jangan Tambah atau kurangi CSS yang ada! -->
+</head>
+<body>
+<!-- Replace command di body ini dengan code-->
+<!-- Tulis code sesuai format aturan table dan form pada HTML -->
+<!-- selamat mengerjakan -->
+ <table border="1">
+    <tr>
+        <th> </th>
+        <th colspan="7">Form pendaftaran Peserta Didik Baru</th>
+     
+
+    </tr>
+    <tr>
+       <th>nama</th>
+       <td colspan="3">
+        <input type="text" placeholder="Nama Depan" required>
+       </td>
+       <td colspan="3">
+        <input type="text" placeholder="Nama Belakang" required>
+       </td>
+    </tr>
+    <tr>
+        <th>Usia/TTL</th>
+        <td colspan="2"><input type="search" name="usia" id="" required></td>
+       <td colspan="2" rowspan="2">       <input type="text" placeholder="Kota" required> </td>
+        <td colspan="2"><input type="date" name="" id="" required></td>
+    </tr>
+    <tr>
+        <th>Alamat</th>
+        <td colspan="2">      <input type="text" placeholder="Kelurahan" required></td>
+        <td colspan="2">
+            <select name="" required>
+                <option value="menu1">Jawa Timur</option>
+                </select>
+        </td>
+    </tr>
+    <tr>
+        <th>Gender</th>
+        <td colspan="3">
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Laki-laki</label>
+        </td>
+        <td colspan="3">
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Perempuan</label>
+        </td>
+    </tr>
+    <tr>
+        <th>Jurusan Pilihan</th>
+        <td>
+            <input type="radio" id="jurusan" name="jurusan" value="jurusan" required>
+            <label for="male">IPAi</label>
+        </td>
+        <td>
+            <input type="radio" id="jurusan" name="jurusan" value="jurusan" required>
+            <label for="male">IPS</label>
+        </td>
+        <td>
+            <input type="radio" id="jurusan" name="jurusan" value="jurusan" required>
+            <label for="male">Bahasa</label>
+        </td>
+        <td>
+            <input type="radio" id="jurusan" name="jurusan" value="jurusan" required>
+            <label for="male">Agama</label>
+        </td>
+        <td>
+            <input type="radio" id="jurusan" name="jurusan" value="jurusan" required>
+            <label for="male">TI</label>
+        </td>
+        <td>
+            <input type="radio" id="jurusan" name="jurusan" value="jurusan" required>
+            <label for="male">Elektro</label>
+        </td>
+    </tr>
+    <tr>
+        <th>Dokumen</th>
+        <td colspan="3">
+             <input type="file" name="" id="" placeholder="ghjk" required>
+        </td>
+        <td colspan="3">
+            <input type="file" name="" id="" placeholder="ghjk" required>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="5"> 
+            <input type="checkbox" id="vehicle1" name="vehicle1" va
+            lue="Bike" required>
+            <label for="vehicle1"> Saya menyetujui semua persyaratan pada pendaftaran ini!</label><br>    
+        </td>
+        <td>
+            <input type="button" onclick="alert('Kamu terdaftar')" value="Daftar" required>
+        </td>
+        <td>
+            <input type="button" onclick="alert('Ulangi!')" value="Reset" required>
+        </td>
+    </tr>
+ </table>
+</body>
+</html>
