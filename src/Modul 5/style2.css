@@ -1,0 +1,55 @@
+.header{
+    height: 70px;
+    background-color: red;
+    text-align: center;
+   
+}
+
+.judul{
+  font-size: 35px;
+font-family: 'Times New Roman', Times, serif;
+padding-top: 10px;
+}
+
+.isi{
+    margin-top: 50px;
+    height: 500px;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.konten{
+    /* margin-top: 30px; */
+    display: flex;
+    flex-direction: row;
+    gap: 140px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.gambar{
+       width: 300px;
+       
+}
+
+.deskripsi{
+    font-size: 40px;
+}
+
+.tautan{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+.tabel{
+    margin: 50px;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+}

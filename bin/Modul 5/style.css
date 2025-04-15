@@ -1,0 +1,29 @@
+body{
+    background-color: #6495ED;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.box{
+    background-color: #6495ED;
+    width: 300px;
+    padding: 20px;
+    margin: 30px;
+    border: 10px solid #00008B;
+    box-shadow: 10px 10px 10px black;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 2px black;
+    margin-left: 10px;
+}
+
+h2{
+    color: white;
+    font-family: 'Times New Roman', Times, serif
+}
+
+ul{
+    color: black;
+}
