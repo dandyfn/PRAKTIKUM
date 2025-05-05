@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartu Makanan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .card {
+            width: 500px;
+            height: 350px;
+            border: 3px solid black;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+        }
+        .card img {
+            height: 60%;
+            width: 100%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+        .card-content {
+            padding: 10px 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 1; 
+            position: relative;
+        }
+        .card h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .card p {
+            margin: 10px 0;
+            color: #555;
+            flex-grow: 1;
+        }
+        .card button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 80px;
+            align-self: flex-end;
+        }
+   
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="/src/gambar/resep-sate-ayam-madura-mencicipi-makanan-asli-indonesia-yang-mendunia.jpg" alt="Sate Madura">
+            <div class="card-content">
+                <h2>Sate Madura</h2>
+                <p>Sate madura sangat enak disajikan. Dihidangkan dengan sambal kacang dan bumbu.</p>
+                <button>Beli</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/src/gambar/nasi goreng.jpeg" alt="Nasi Goreng">
+            <div class="card-content">
+                <h2>Nasi Goreng</h2>
+                <p>Nasi goreng dengan bumbu khas Indonesia, lengkap dengan telur dan kerupuk.</p>
+                <button>Beli</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/src/gambar/gado gado.jpeg" alt="Gado-Gado">
+            <div class="card-content">
+                <h2>Gado-Gado</h2>
+                <p>Gado-gado sayur segar disiram dengan saus kacang, cocok untuk makan siang sehat.</p>
+                <button>Beli</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
