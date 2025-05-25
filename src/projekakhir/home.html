@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>NutriCheck - Kenali Nutrisi, Jaga Kesehatan</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background-color: #fff1dc;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        header {
+            background: linear-gradient(to right, #ffe600, #ff7043);
+            padding: 10px 0;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            position: fixed; 
+            width: 100%;     
+            top: 0;         
+            z-index: 1000;   
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .logo {
+            font-size: 24px;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(/src/projekakhir/gambar/latarbelakang.png) center/cover no-repeat;
+            height: 300px; 
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center;
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+            margin-bottom: 0; 
+        }
+
+        .hero h1 {
+            font-size: 48px; 
+            margin-bottom: 20px; 
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px; 
+        }
+
+        .hero-buttons button {
+            padding: 15px 30px;
+            background-color: #ff7043; 
+            color: white;
+            border: none;
+            border-radius: 30px; 
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .hero-buttons button:hover {
+            background-color: #e65c2e; 
+            transform: translateY(-2px); 
+        }
+
+       
+        .content-area {
+            min-height: 400px; 
+     
+            padding: 30px; 
+        }
+
+
+        .container, .button-outside-form, .result-table {
+            display: none;
+        }
+
+      
+        .gizi-section {
+            background-color: #fff1dc; 
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .gizi-section h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .gizi-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .gizi-card {
+            background-color: #fce8c4; 
+            border-radius: 10px;
+            padding: 25px;
+            width: 220px; 
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+
+        .gizi-card:hover {
+            transform: translateY(-15px);
+        }
+
+        .gizi-card h3 {
+            font-size: 18px;
+            color: #5a3c00;
+            margin-bottom: 10px;
+            min-height: 45px; 
+        }
+
+        .gizi-card p {
+            font-size: 14px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+     
+        footer {
+            background-color: #333;
+            color: #f4f4f4;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+            margin-top: 0; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">🍎 NutriCheck</div>
+        <nav>
+            <a href="/src/projekakhir/home.html">Home</a>
+            <a href="/src/projekakhir/nutrisi.html">Nutrisi</a>
+            <a href="/src/projekakhir/kalkulatorkalori.html">Kalkulator Kalori</a>
+            <a href="#">Tips Gizi</a>
+             <a href="#">Peringatan Kesehatan</a>
+      <a href="#">Mengelola Makanan</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Kenali Nutrisi, Jaga Kesehatan</h1>
+        <div class="hero-buttons">
+            <button type="button" id="hitungKaloriBtn">Hitung Kalori</button>
+            <button type="button" id="lihatNutrisiBtn">Lihat Nutrisi</button>
+        </div>
+    </section>
+
+    <div class="content-area">
+        <section class="gizi-section">
+            <h2>Mengapa Gizi Seimbang Itu Penting?</h2>
+            <div class="gizi-cards">
+                <div class="gizi-card">
+                    <h3>Menjaga Keseimbangan Energi:</h3>
+                    <p>Asupan karbohidrat, protein, dan lemak yang cukup memberikan energi yang dibutuhkan tubuh untuk menjalani aktivitas sehari-hari.</p>
+                </div>
+                <div class="gizi-card">
+                    <h3>Mendukung Pertumbuhan dan Perbaikan Sel:</h3>
+                    <p>Nutrisi seperti protein berperan penting dalam memperbaiki dan mengganti sel yang rusak serta mendukung pertumbuhan yang sehat.</p>
+                </div>
+                <div class="gizi-card">
+                    <h3>Menjaga Kesehatan Organ:</h3>
+                    <p>Vitamin dan mineral mendukung fungsi organ vital seperti jantung, ginjal, dan otak agar tetap bekerja dengan baik.</p>
+                </div>
+                <div class="gizi-card">
+                    <h3>Meningkatkan Sistem Kekebalan Tubuh:</h3>
+                    <p>Gizi yang seimbang membantu memperkuat daya tahan tubuh untuk melawan infeksi dan penyakit.</p>
+                </div>
+                <div class="gizi-card">
+                    <h3>Mencegah Penyakit Kronis:</h3>
+                    <p>Pola makan yang sehat dapat membantu mencegah berbagai kondisi serius seperti diabetes, hipertensi, dan penyakit jantung.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        © 2025 NutrisiSehat | Kontak: info@nutrisisehat.com
+    </footer>
+
+   
+</body>
+</html>

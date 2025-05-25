@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Kebutuhan Kalori</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">NutrisiSehat</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="nutrisi.html">Nutrisi</a></li>
+                <li><a href="kalkulator.html">Kalkulator Kalori</a></li>
+                <li><a href="tips-gizi.html">Tips Gizi</a></li>
+                <li><a href="dampak.html">Dampak Pola Makan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+ <h2>Hitung Kebutuhan Kalori Anda</h2>
+    <section class="calorie-form">
+        <table class="calorie-table">
+            <tr>
+                <td><label for="gender">Jenis Kelamin:</label></td>
+                <td>
+                    <select id="gender">
+                        <option value="pria">Pria</option>
+                        <option value="wanita">Wanita</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="age">Usia:</label></td>
+                <td><input type="number" id="age" placeholder="Masukkan usia" required></td>
+            </tr>
+            <tr>
+                <td><label for="height">Tinggi Badan (cm):</label></td>
+                <td><input type="number" id="height" placeholder="Masukkan tinggi badan" required></td>
+            </tr>
+            <tr>
+                <td><label for="weight">Berat Badan (kg):</label></td>
+                <td><input type="number" id="weight" placeholder="Masukkan berat badan" required></td>
+            </tr>
+            <tr>
+                <td><label for="activity">Aktivitas Fisik:</label></td>
+                <td>
+                    <select id="activity">
+                        <option value="ringan">Ringan</option>
+                        <option value="sedang">Sedang</option>
+                        <option value="berat">Berat</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="button" id="calculate-btn">Hitung Kalori</button>
+                </td>
+            </tr>
+        </table>
+        <div id="result" class="result">
+            <!-- Hasil kalori akan ditampilkan di sini -->
+        </div>
+    </section>
+</main>
+<section class="section-hasil">
+    <h2>Hasil Perhitungan Kalori Harian</h2>
+    <div class="table-container">
+        <table class="modern-table">
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Nilai</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>Laki-laki</td>
+                </tr>
+                <tr>
+                    <td>Usia</td>
+                    <td>25 tahun</td>
+                </tr>
+                <tr>
+                    <td>Berat Badan</td>
+                    <td>70 kg</td>
+                </tr>
+                <tr>
+                    <td>Tinggi Badan</td>
+                    <td>175 cm</td>
+                </tr>
+                <tr>
+                    <td>Aktivitas Fisik</td>
+                    <td>Sedang</td>
+                </tr>
+                <tr>
+                    <td>Kebutuhan Kalori</td>
+                    <td><strong>2.500 kkal/hari</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+    <footer>
+        <p>© 2025 NutrisiSehat | Kontak: info@nutrisisehat.com</p>
+    </footer>
+</body>
+</html>

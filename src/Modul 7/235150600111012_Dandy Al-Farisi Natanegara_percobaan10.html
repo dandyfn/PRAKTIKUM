@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kalkulator</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f2f2f2;
+    }
+
+    .calculator {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      width: 260px;
+    }
+
+    .display {
+      background: #333;
+      color: white;
+      font-size: 2em;
+      text-align: right;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      overflow-x: auto;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    button {
+      padding: 15px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .operator {
+      background: #e0e0e0;
+    }
+
+    .equal {
+      background: #3498db;
+      color: white;
+      grid-row: span 2;
+    }
+
+    .clear {
+      background: #e74c3c;
+      color: white;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+<div class="calculator">
+  <div class="display" id="display">0</div>
+  <div class="buttons">
+    <button class="operator" onclick="input('+')">+</button>
+    <button class="operator" onclick="input('-')">-</button>
+    <button class="operator" onclick="input('*')">×</button>
+    <button class="operator" onclick="input('/')">÷</button>
+
+    <button onclick="input('7')">7</button>
+    <button onclick="input('8')">8</button>
+    <button onclick="input('9')">9</button>
+    <button class="equal" onclick="calculate()">=</button>
+
+    <button onclick="input('4')">4</button>
+    <button onclick="input('5')">5</button>
+    <button onclick="input('6')">6</button>
+
+    <button onclick="input('1')">1</button>
+    <button onclick="input('2')">2</button>
+    <button onclick="input('3')">3</button>
+
+    <button onclick="input('0')">0</button>
+    <button onclick="input('.')">.</button>
+    <button class="clear" onclick="clearDisplay()">AC</button>
+  </div>
+</div>
+
+<script>
+  let display = document.getElementById('display'); 
+
+  function input(value) {
+    if (display.textContent === '0') {
+      display.textContent = value;
+    } else {
+      display.textContent += value;
+    }
+  }
+
+  function calculate() {
+    try {
+      display.textContent = eval(display.textContent);
+    } catch {
+      display.textContent = 'Error';
+    }
+  }
+
+  function clearDisplay() {
+    display.textContent = '0';
+  }
+</script>
+
+</body>
+</html>

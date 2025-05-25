@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriCheck - Nutrisi Makanan</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #fff1dc;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(to right, #ffe600, #ff7043);
+      padding: 10px 0;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    .logo {
+      font-size: 24px;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/src/projekakhir/gambar/latarbelakang.png') center/cover no-repeat;
+      height: 100px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .hero h1 {
+      color: white;
+      font-size: 32px;
+      margin: 0;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+    }
+
+  
+    .nutrient-section {
+      display: flex;
+      justify-content: space-around;
+      padding: 40px 20px;
+      text-align: center;
+      flex-wrap: wrap;
+    }
+
+    .nutrient-box {
+      width: 250px;
+      background-color: transparent;
+      margin: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+    }
+
+    .nutrient-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.nutrient-box h2,
+.nutrient-box p,
+.nutrient-box img {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nutrient-box:hover h2 {
+  color: #ff7043;
+}
+
+.nutrient-box:hover p {
+  color: #333;
+}
+
+.nutrient-box:hover img {
+  transform: scale(1.05);
+}
+
+
+    .nutrient-box h2 {
+      font-size: 24px;
+      color: black;
+      font-weight: bold;
+    }
+
+    .nutrient-box p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .nutrient-box img {
+      width: 100%;
+      max-height: 120px;
+      object-fit: contain;
+      margin-top: 10px;
+    }
+     footer {
+   background-color: #333;
+   color: #f4f4f4;
+   text-align: center;
+   padding: 20px 0;
+   font-size: 14px;
+   margin-top: auto; 
+  }
+
+  .food-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.food-card {
+  background-color: #ffccbc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 180px;
+  padding: 15px;
+  font-size: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.food-card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.food-card p {
+  margin: 4px 0;
+}
+
+.food-card p b {
+  font-weight: bold;
+}
+
+
+    @media (max-width: 768px) {
+      .nutrient-section {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">🍎 NutriCheck</div>
+    <nav>
+      <a href="/src/projekakhir/home.html">Home</a>
+      <a href="/src/projekakhir/nutrisi.html">Nutrisi</a>
+      <a href="/src/projekakhir/kalkulatorkalori.html">Kalkulator Kalori</a>
+      <a href="#">Tips Gizi</a>
+      <a href="#">Peringatan Kesehatan</a>
+      <a href="#">Mengelola Makanan</a>
+      
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Jenis Nutrisi dan Kandungannya</h1>
+  </section>
+
+  <section class="nutrient-section">
+    <div class="nutrient-box">
+      <h2>Karbohidrat</h2>
+      <p>Penting untuk energi tubuh dan sumber utama energi bagi tubuh..</p>
+      <img src="/src/projekakhir/gambar/karbohidrat.png" alt="Karbohidrat">
+    </div>
+    <div class="nutrient-box">
+      <h2>Protein</h2>
+      <p>Penting untuk pertumbuhan, perbaikan jaringan, dan fungsi enzim serta hormon.</p>
+      <img src="/src/projekakhir/gambar/protein.png" alt="Protein">
+    </div>
+    <div class="nutrient-box">
+      <h2>Lemak</h2>
+      <p>Sumber energi cadangan, melindungi organ, dan membantu penyerapan vitamin.</p>
+      <img src="/src/projekakhir/gambar/lemak.png" alt="Lemak">
+    </div>
+  </section>
+  <section class="nutrient-section">
+    <div class="nutrient-box">
+      <h2>Mineral</h2>
+      <p>Penting untuk kesehatan tulang, sistem saraf, dan keseimbangan cairan.</p>
+      <img src="/src/projekakhir/gambar/karbohidrat.png" alt="Karbohidrat">
+    </div>
+    <div class="nutrient-box">
+      <h2>Serat</h2>
+      <p>Membantu pencernaan dan menjaga kesehatan usus.</p>
+      <img src="/src/projekakhir/gambar/protein.png" alt="Protein">
+    </div>
+    <div class="nutrient-box">
+      <h2>Vitamin</h2>
+      <p>Membantu berbagai proses biokimia dalam tubuh, termasuk fungsi sistem imun dan metabolisme.</p>
+      <img src="/src/projekakhir/gambar/lemak.png" alt="Lemak">
+    </div>
+  </section>
+
+  <section class="food-section">
+  <div class="food-card">
+    <h3>Nasi Putih ⚪</h3>
+    <p><b>Kalori:</b> 175 kkal</p>
+    <p><b>Protein:</b> 3.2g</p>
+    <p><b>Lemak:</b> 0.4g</p>
+    <p><b>Karbohidrat:</b> 38g</p>
+  </div>
+  <div class="food-card">
+    <h3>Dada Ayam 🍗</h3>
+    <p><b>Kalori:</b> 165 kkal</p>
+    <p><b>Protein:</b> 31g</p>
+    <p><b>Lemak:</b> 3.6g</p>
+    <p><b>Karbohidrat:</b> 0g</p>
+  </div>
+  <div class="food-card">
+    <h3>Brokoli 🥦</h3>
+    <p><b>Kalori:</b> 34 kkal</p>
+    <p><b>Protein:</b> 2.8g</p>
+    <p><b>Lemak:</b> 0.4g</p>
+    <p><b>Karbohidrat:</b> 7g</p>
+  </div>
+  <div class="food-card">
+    <h3>Alpukat 🥑</h3>
+    <p><b>Kalori:</b> 160 kkal</p>
+    <p><b>Protein:</b> 2g</p>
+    <p><b>Lemak:</b> 15g</p>
+    <p><b>Karbohidrat:</b> 9g</p>
+  </div>
+</section>
+<section class="food-section">
+  <div class="food-card">
+    <h3>Telur Rebus 🍳</h3>
+    <p><b>Kalori:</b> 68 kkal</p>
+    <p><b>Protein:</b> 6g</p>
+    <p><b>Lemak:</b> 4.8g</p>
+    <p><b>Karbohidrat:</b> 0.6g</p>
+  </div>
+  <div class="food-card">
+    <h3>Roti Gandum 🍞</h3>
+    <p><b>Kalori:</b> 69 kkal</p>
+    <p><b>Protein:</b> 3.5g</p>
+    <p><b>Lemak:</b> 1g</p>
+    <p><b>Karbohidrat:</b> 12g</p>
+  </div>
+  <div class="food-card">
+    <h3>Pisang 🍌</h3>
+    <p><b>Kalori:</b> 105 kkal</p>
+    <p><b>Protein:</b> 1.3g</p>
+    <p><b>Lemak:</b> 0.3g</p>
+    <p><b>Karbohidrat:</b> 27g</p>
+  </div>
+  <div class="food-card">
+    <h3>Ikan Salmon 🐟</h3>
+    <p><b>Kalori:</b> 206 kkal</p>
+    <p><b>Protein:</b> 22g</p>
+    <p><b>Lemak:</b> 15g</p>
+    <p><b>Karbohidrat:</b> 0g</p>
+  </div>
+</section>
+
+
+   <footer>
+  © 2025 NutrisiSehat | Kontak: info@nutrisisehat.com
+ </footer>
+</body>
+</html>
