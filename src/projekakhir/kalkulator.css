@@ -1,0 +1,296 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #fff1dc;
+  display: flex; 
+  flex-direction: column; 
+  min-height: 100vh; 
+ }
+
+ header {
+  background: linear-gradient(to right, #ffe600, #ff7043);
+  padding: 10px 0;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+ }
+
+ nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+ }
+
+ nav a:hover {
+  color: #ffd700;
+ }
+
+ .logo {
+  font-size: 24px;
+ }
+
+ .hero {
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(/src/projekakhir/gambar/latarbelakang.png) center/cover no-repeat;
+  height: 100px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 60px; 
+ }
+
+ .hero h1 {
+  color: white;
+  font-size: 32px;
+  margin-top: 50px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+ text-align: center;
+ }
+
+ .container {
+  max-width: 500px;
+  margin: 30px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+ }
+
+ form .form-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  align-items: center;
+ }
+
+ form label {
+  flex: 1;
+  font-weight: bold;
+  text-align: right;
+  margin-right: 55px;
+ }
+
+ form input,
+ form select {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+ }
+
+ button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: #ff7043;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+ }
+
+ .button-outside-form {
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;
+ }
+
+ .result-table {
+  display: none;
+  width: 100%;
+  max-width: 700px;
+  margin: 30px auto 50px;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+ }
+
+ .result-table th,
+ .result-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+ }
+
+ .result-table th {
+  background-color: #ff9a88;
+  color: white;
+  text-align: left;
+ }
+
+ .result-table td:last-child {
+  text-align: left;
+ }
+
+ .highlight {
+  font-weight: bold;
+  color: #b22222;
+ }
+
+ footer {
+  background-color: #333;
+  color: #f4f4f4;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  margin-top: auto; 
+ }
+
+ 
+/* css untuk hitung kalori makanan */
+
+
+
+.top-banner {
+  text-align: center;
+  color: #a73d3d;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.main-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 25px;
+  background-color: #ff5b4d;
+  color: white;
+  border-radius: 12px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+  margin: 30px 0 20px;
+  font-size: 26px;
+  color: #444;
+}
+
+.menu-scroll {
+   display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  padding: 10px 0;
+   
+}
+
+.menu-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.menu-scroll::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 10px;
+}
+
+
+.menu-item {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border: 2px solid transparent;
+  border-radius: 12px;
+}
+
+
+.menu-item:hover {
+  transform: scale(1.05);
+  border-color: #4caf50; /* Hijau saat hover */
+}
+
+.menu-item.selected {
+  border-color: #f44336; /* Merah saat dipilih */
+  background-color: #ffecec;
+}
+
+.menu-item img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.menu-text {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.btn-container {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.btn-hitung {
+  padding: 10px 25px;
+  background-color: #ff7052;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.btn-hitung:hover {
+  background-color: #ff5733;
+}
+
+/* 
+css untuk hasil perhitungan */
+
+   
+        .content-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Ini yang akan menengahkan h1 dan result-container */
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            /* Warna dan ukuran font sesuai sketsa dari gambar sebelumnya */
+            font-size: 32px;
+            color: #444;
+            text-align: left; /* Teks "Total Kalori Kamu:" harus rata kiri, tetapi keseluruhan bloknya di tengah */
+            margin-bottom: 40px;
+            width: 90%; /* Sesuaikan lebar dengan kontainer hasil */
+            max-width: 450px; /* Sesuaikan lebar maksimal dengan kontainer hasil */
+            box-sizing: border-box; /* Pastikan padding tidak membuat lebar melebihi */
+        }
+
+        .result-container {
+            background-color: #c06f4ab1; /* Warna latar belakang sesuai sketsa */
+            border-radius: 15px;
+            padding: 25px 30px;
+            width: 90%;
+            max-width: 450px; /* Lebar maksimal kontainer hasil sesuai sketsa */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            text-align: center;
+            box-sizing: border-box;
+            /* Pastikan kontainer ini tetap di tengah halaman */
+            margin: 0 auto; /* Memberikan margin auto untuk menengahkan secara horizontal */
+        }
+
+        .result-kalori {
+            font-size: 3em; /* Ukuran font besar untuk kalori sesuai sketsa */
+            font-weight: 700;
+            color: #000000; /* Warna teks sesuai sketsa */
+            margin-bottom: 15px;
+        }
+
+        .result-description {
+            font-size: 0.95em;
+            line-height: 1.6;
+            color: #555;
+            text-align: center; /* Pastikan deskripsi rata tengah dalam box */
+        }

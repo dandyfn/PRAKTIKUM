@@ -4,152 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>NutriCheck - Kalkulator Kalori</title>
- <style>
-  body {
-   font-family: 'Segoe UI', sans-serif;
-   margin: 0;
-   background-color: #fff1dc;
-      display: flex; 
-      flex-direction: column; 
-      min-height: 100vh; 
-  }
-
-  header {
-   background: linear-gradient(to right, #ffe600, #ff7043);
-   padding: 10px 0;
-   text-align: center;
-   color: white;
-   font-weight: bold;
-   position: fixed;
-   width: 100%;
-   top: 0;
-   z-index: 1000;
-  }
-
-    nav a {
-   margin: 0 15px;
-   color: white;
-   text-decoration: none;
-   font-size: 18px;
-  }
-
-  nav a:hover {
-   color: #ffd700;
-  }
-
-  .logo {
-   font-size: 24px;
-  }
-
-  .hero {
-   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(/src/projekakhir/gambar/latarbelakang.png) center/cover no-repeat;
-   height: 100px;
-   padding: 0 20px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   text-align: center;
-      margin-top: 60px; 
-  }
-
-  .hero h1 {
-   color: white;
-   font-size: 32px;
-   margin: 0;
-   text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
-  }
-
-  .container {
-   max-width: 500px;
-   margin: 30px auto;
-   background: white;
-   padding: 30px;
-   border-radius: 12px;
-   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-
-  form .form-group {
-   display: flex;
-   justify-content: space-between;
-   margin-bottom: 15px;
-   align-items: center;
-  }
-
-  form label {
-   flex: 1;
-   font-weight: bold;
-   text-align: right;
-   margin-right: 55px;
-  }
-
-  form input,
-  form select {
-   flex: 1;
-   padding: 8px;
-   border: 1px solid #ccc;
-   border-radius: 6px;
-  }
-
-  button {
-   display: block;
-   margin: 20px auto 0;
-   padding: 10px 20px;
-   background-color: #ff7043;
-   color: white;
-   border: none;
-   border-radius: 20px;
-   font-size: 16px;
-   cursor: pointer;
-  }
-
-  .button-outside-form {
-    max-width: 500px;
-    margin: 20px auto;
-    text-align: center;
-  }
-
-  .result-table {
-   display: none;
-   width: 100%;
-   max-width: 700px;
-   margin: 30px auto;
-   border-collapse: collapse;
-   background: white;
-   border-radius: 12px;
-   overflow: hidden;
-   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-
-  .result-table th,
-  .result-table td {
-   padding: 12px;
-   border-bottom: 1px solid #eee;
-  }
-
-  .result-table th {
-   background-color: #ff9a88;
-   color: white;
-   text-align: left;
-  }
-
-  .result-table td:last-child {
-   text-align: left;
-  }
-
-  .highlight {
-   font-weight: bold;
-   color: #b22222;
-  }
-
-  footer {
-   background-color: #333;
-   color: #f4f4f4;
-   text-align: center;
-   padding: 20px 0;
-   font-size: 14px;
-   margin-top: auto; 
-  }
- </style>
+<link rel="stylesheet" href="kalkulator.css">
 </head>
 <body>
  <header>
@@ -157,10 +12,10 @@
   <nav>
    <a href="/src/projekakhir/home.html">Home</a>
    <a href="/src/projekakhir/nutrisi.html">Nutrisi</a>
-   <a href="#">Kalkulator Kalori</a>
-   <a href="#">Tips Gizi</a>
-    <a href="#">Peringatan Kesehatan</a>
-      <a href="#">Mengelola Makanan</a>
+   <a href="/src/projekakhir/kalkulatorkalori.html">Kalkulator Kalori</a>
+   <a href="/src/projekakhir/tips.html">Tips Gizi</a>
+   <a href="/src/projekakhir/peringatan.html">Peringatan Kesehatan</a>
+   <a href="#">Mengelola Makanan</a>
   </nav>
  </header>
 
@@ -185,7 +40,7 @@
    <div class="form-group">
     <label for="height">Tinggi Badan (cm) : </label>
     <input type="number" id="height" required />
-    </div>
+   </div>
    <div class="form-group">
     <label for="weight">Berat Badan (kg) : </label>
     <input type="number" id="weight" required />
@@ -208,7 +63,8 @@
 
  <table class="result-table" id="resultTable">
   <colgroup>
-   <col style="width: 40%;"> <col style="width: 60%;"> </colgroup>
+   <col style="width: 40%;"> <col style="width: 60%;">
+  </colgroup>
   <thead>
    <tr>
     <th>Parameter</th>
@@ -218,53 +74,186 @@
   <tbody id="resultBody"></tbody>
  </table>
 
+ <!-- hitung kalori makanan -->
+
+<div class="top-banner">
+    Yuk hitung kalori makananmu!<br>
+    <span class="main-button">Mau Makan Apa?</span>
+  </div>
+
+  <h1>Hitung Kalori Makan</h1>
+
+  
+  <div class="scroll-container">
+    <div class="menu-scroll">
+      <!-- Card 1 - 10 -->
+      <div class="menu-item" data-kalori="130">
+        <img src="/src/projekakhir/gambar/nasi.png" alt="Nasi">
+        <div class="menu-text">Nasi Putih<br>130 kkal</div>
+      </div>
+      <div class="menu-item" data-kalori="225">
+        <img src="/src/projekakhir/gambar/ayamgoreng.png" alt="Ayam">
+        <div class="menu-text">Ayam Goreng<br>225 kkal</div>
+      </div>
+      <div class="menu-item" data-kalori="60">
+        <img src="/src/projekakhir/gambar/kangkung.png" alt="Kangkung">
+        <div class="menu-text">Kangkung<br>60 kkal</div>
+      </div>
+      <div class="menu-item" data-kalori="60">
+        <img src="/src/projekakhir/gambar/esteh.png" alt="Teh">
+        <div class="menu-text">Teh Manis<br>60 kkal</div>
+      </div>
+      <div class="menu-item" data-kalori="150">
+        <img src="/src/projekakhir/gambar/tahuisi.png" alt="Tahu">
+        <div class="menu-text">Tahu Isi<br>150 kkal</div>
+      </div>
+      <div class="menu-item" data-kalori="130">
+        <img src="/src/projekakhir/gambar/bakwan.png" alt="Bakwan">
+        <div class="menu-text">Bakwan<br>130 kkal</div>
+      </div>
+      <div class="menu-item" data-kalori="28">
+        <img src="/src/projekakhir/gambar/bayam.png" alt="Bayam">
+        <div class="menu-text">Bayam<br>100 kkal</div>
+      </div>
+      <div class="menu-item" data-kalori="215">
+        <img src="/src/projekakhir/gambar/dagingsapi.png" alt="Daging Sapi">
+        <div class="menu-text">Daging Sapi<br>100 kkal</div>
+      </div>
+      <div class="menu-item" data-kalori="175">
+        <img src="/src/projekakhir/gambar/ikanbakar.png" alt="Ikan Bakar">
+        <div class="menu-text">Ikan Bakar<br>100 kkal</div>
+      </div>
+       <div class="menu-item"data-kalori="110">
+        <img src="/src/projekakhir/gambar/jusapel.png" alt="Jus Apel">
+        <div class="menu-text">Jus Apel<br>100 kkal</div>
+      </div>
+       <div class="menu-item" data-kalori="85">
+        <img src="/src/projekakhir/gambar/kerupukudang.png" alt="Kerupuk Udang">
+        <div class="menu-text">Kerupuk Udang<br>100 kkal</div>
+      </div>
+       <div class="menu-item" data-kalori="375">
+        <img src="/src/projekakhir/gambar/mieinstan.png" alt="Mie Instan">
+        <div class="menu-text">Mie Instan<br>100 kkal</div>
+      </div>
+       <div class="menu-item" data-kalori="110">
+        <img src="/src/projekakhir/gambar/nasimerah.png" alt="Nasi Merah">
+        <div class="menu-text">Nasi Merah<br>100 kkal</div>
+      </div>
+       <div class="menu-item" data-kalori="95">
+        <img src="/src/projekakhir/gambar/pisang.png" alt="Pisang">
+        <div class="menu-text">Pisang<br>100 kkal</div>
+      </div>
+       <div class="menu-item" data-kalori="135">
+        <img src="/src/projekakhir/gambar/tempe.png" alt="Tempe">
+        <div class="menu-text">Tempe<br>100 kkal</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-container">
+    <button class="btn-hitung">Hitung</button>
+  </div>
+
+  <!-- hitung kalori makanan -->
+   <h1 style="margin-left: 490px;">Total Kalori Kamu:</h1>
+
+<div class="content-wrapper">
+     
+
+        <div class="result-container">
+            <div class="result-kalori">0 Kkal</div>
+            <p class="result-description">
+                
+            </p>
+        </div>
+    </div>
+
  <footer>
   © 2025 NutrisiSehat | Kontak: info@nutrisisehat.com
  </footer>
 
- <script>
+<script>
   document.addEventListener("DOMContentLoaded", function () {
-   const form = document.getElementById("kaloriForm");
-   const hitungKaloriBtn = document.getElementById("hitungKaloriBtn");
-   const resultTable = document.getElementById("resultTable");
-   const resultBody = document.getElementById("resultBody");
-   const formContainer = document.getElementById("form-container");
-   const buttonOutsideForm = document.querySelector(".button-outside-form");
+    const form = document.getElementById("kaloriForm");
+    const hitungKaloriBtn = document.getElementById("hitungKaloriBtn");
+    const resultTable = document.getElementById("resultTable");
+    const resultBody = document.getElementById("resultBody");
+    const menuItems = document.querySelectorAll(".menu-item");
+    const btnHitungMakanan = document.querySelector(".btn-hitung");
+    const resultKaloriDiv = document.querySelector(".result-kalori");
+    const description = document.querySelector(".result-description");
 
-   hitungKaloriBtn.addEventListener("click", function (e) {
-    if (!form.reportValidity()) {
-     return;
-    }
+    let totalKalori = 0;
+    let kebutuhanKaloriGlobal = null;
 
-    const gender = document.getElementById("gender").value;
-    const age = parseInt(document.getElementById("age").value);
-    const height = parseFloat(document.getElementById("height").value);
-    const weight = parseFloat(document.getElementById("weight").value);
-    const activity = parseFloat(document.getElementById("activity").value);
+    // Kalkulator kebutuhan kalori harian
+    hitungKaloriBtn.addEventListener("click", function () {
+      if (!form.reportValidity()) return;
 
-    let bmr = 0;
-    if (gender === "pria") {
-     bmr = 88.36 + (13.4 * weight) + (4.8 * height) - (5.7 * age);
-    } else {
-     bmr = 447.6 + (9.2 * weight) + (3.1 * height) - (4.3 * age);
-    }
+      const gender = document.getElementById("gender").value;
+      const age = parseInt(document.getElementById("age").value);
+      const height = parseFloat(document.getElementById("height").value);
+      const weight = parseFloat(document.getElementById("weight").value);
+      const activity = parseFloat(document.getElementById("activity").value);
 
-    const kebutuhanKalori = Math.round(bmr * activity);
+      let bmr = 0;
+      if (gender === "pria") {
+        bmr = 88.36 + (13.4 * weight) + (4.8 * height) - (5.7 * age);
+      } else {
+        bmr = 447.6 + (9.2 * weight) + (3.1 * height) - (4.3 * age);
+      }
 
-    resultBody.innerHTML = `
-     <tr><td>Jenis Kelamin</td><td>${gender.charAt(0).toUpperCase() + gender.slice(1)}</td></tr>
-     <tr><td>Usia</td><td>${age} Tahun</td></tr>
-     <tr><td>Tinggi Badan</td><td>${height} cm</td></tr>
-     <tr><td>Berat Badan</td><td>${weight} kg</td></tr>
-     <tr><td>Aktivitas Fisik</td><td>${activity === 1.2 ? "Ringan" : activity === 1.55 ? "Sedang" : "Berat"}</td></tr>
-     <tr><td>Kebutuhan Kalori</td><td class="highlight">${kebutuhanKalori.toLocaleString()} kkal/hari</td></tr>
-    `;
+      const kebutuhanKalori = Math.round(bmr * activity);
+      kebutuhanKaloriGlobal = kebutuhanKalori;
 
-    formContainer.style.display = "none";
-    buttonOutsideForm.style.display = "none";
-    resultTable.style.display = "table";
-   });
+      resultBody.innerHTML = `
+        <tr><td>Jenis Kelamin</td><td>${gender.charAt(0).toUpperCase() + gender.slice(1)}</td></tr>
+        <tr><td>Usia</td><td>${age} Tahun</td></tr>
+        <tr><td>Tinggi Badan</td><td>${height} cm</td></tr>
+        <tr><td>Berat Badan</td><td>${weight} kg</td></tr>
+        <tr><td>Aktivitas Fisik</td><td>${activity === 1.2 ? "Ringan" : activity === 1.55 ? "Sedang" : "Berat"}</td></tr>
+        <tr><td>Kebutuhan Kalori</td><td class="highlight">${kebutuhanKalori.toLocaleString()} kkal/hari</td></tr>
+      `;
+
+      resultTable.style.display = "table";
+    });
+
+    // Menu makanan
+    menuItems.forEach(item => {
+      item.addEventListener("click", () => {
+        const kalori = parseInt(item.getAttribute("data-kalori"));
+        if (item.classList.contains("selected")) {
+          totalKalori -= kalori;
+          item.classList.remove("selected");
+        } else {
+          totalKalori += kalori;
+          item.classList.add("selected");
+        }
+      });
+    });
+
+    btnHitungMakanan.addEventListener("click", () => {
+      resultKaloriDiv.textContent = `${totalKalori} Kkal`;
+
+      if (kebutuhanKaloriGlobal === null) {
+        description.textContent = "Isi dulu dong formnya biar kami tau kebutuhan kalorimu.";
+      } else if (totalKalori > kebutuhanKaloriGlobal) {
+        description.textContent = "Yakin mau makan segini?";
+      } else if (totalKalori < kebutuhanKaloriGlobal) {
+        description.textContent = "Ayo makan lebih banyak!";
+      } else {
+        description.textContent = "Pas banget nih dengan kebutuhan kamu!";
+      }
+    });
+
+    window.addEventListener("load", () => {
+      totalKalori = 0;
+      resultKaloriDiv.textContent = "0 Kkal";
+      menuItems.forEach(item => item.classList.remove("selected"));
+    });
   });
- </script>
+</script>
+
+  
 </body>
 </html>
